@@ -75,7 +75,7 @@ try {
   } else if (exportType === "file") {
     // Write the secrets to a file at the specified path
     const fileContent = Object.keys(keyValueSecrets)
-      .map((key) => `${key}='${keyValueSecrets[key]}'`)
+      .map((key) => `${key}="${keyValueSecrets[key]}"`)
       .join("\n");
 
     try {
